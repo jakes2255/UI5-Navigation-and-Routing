@@ -1,10 +1,14 @@
 <mvc:View controllerName="com.demo.Z_NavigationRouting.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
 	displayBlock="true" xmlns="sap.m">
-	<App id="idAppControl">
-		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+	<Shell>
+		<App id="app">
+			<pages>
+				<Page>
+					<content>
+						<Button text="{i18n>iWantToNavigate}" class="sapUiTinyMarginEnd"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>
