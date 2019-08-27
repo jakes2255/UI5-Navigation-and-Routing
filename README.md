@@ -1,5 +1,5 @@
 # UI5-Navigation-and-Routing
-![alt text](https://img.shields.io/badge/SAP-UI5-blue "SAPUI5") ![alt text](https://img.shields.io/badge/ -Navigation-yellowgreen "Navigation") ![alt text](https://img.shields.io/badge/ -Routing-green "Routing") 
+![alt text](https://img.shields.io/badge/SAP-UI5-blue "SAPUI5") ![alt text](https://img.shields.io/badge/Navigation-Routing-yellowgreen "Navigation") ![alt text](https://img.shields.io/badge/Ver.-1.52-green "Routing") 
 
 
 
