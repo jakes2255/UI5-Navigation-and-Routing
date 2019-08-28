@@ -6,6 +6,10 @@ sap.ui.define([
 	return Controller.extend("com.demo.Z_NavigationRouting.controller.App", {
 		onInit: function () {
 
+		},
+		onNavToProducts : function (){
+			//debugger;
+			this.getOwnerComponent().getRouter().navTo("employeeList");
 		}
 	});
 });

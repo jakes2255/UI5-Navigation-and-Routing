@@ -1,14 +1,24 @@
 <mvc:View controllerName="com.demo.Z_NavigationRouting.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
 	displayBlock="true" xmlns="sap.m">
-	<Shell>
-		<App id="app">
-			<pages>
-				<Page>
-					<content>
-						<Button text="{i18n>iWantToNavigate}" class="sapUiTinyMarginEnd"/>
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+	<App id="app">
+		<pages>
+			<Page title="Home" class="sapUiContentPadding">
+				<content>
+					<FlexBox alignItems="Center" justifyContent="Center">
+						<items>
+							<Carousel class="sapUiContentPadding" loop="true">
+								<pages>
+									<Image src="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg" alt="Product Image"/>
+									<Image src="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1050.jpg" alt="Product Image"/>
+									<Image src="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1041.jpg" alt="Product Image"/>
+									<Image src="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg" alt="Product Image"/>
+								</pages>
+							</Carousel>
+							<Button text="{i18n>iWantToNavigate}" class="sapUiTinyMarginEnd" press="onNavToProducts"/>
+						</items>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
 </mvc:View>

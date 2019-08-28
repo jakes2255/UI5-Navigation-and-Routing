@@ -14,7 +14,6 @@
 			"version": "1.38.11"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -33,10 +32,8 @@
 		"supportedThemes": [
 			"sap_hcb",
 			"sap_belize"
-
 		]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "com.demo.Z_NavigationRouting.view.App",
@@ -63,9 +60,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -74,20 +73,45 @@
 				"async": true,
 				"viewPath": "com.demo.Z_NavigationRouting.view",
 				"controlAggregation": "pages",
-				"controlId": "idAppControl",
-				"clearControlAggregation": false
+				"controlId": "app",
+				"transition": "slide"
 			},
-			"routes": [{
-				"name": "RouteApp",
-				"pattern": "RouteApp",
-				"target": ["TargetApp"]
-			}],
+			"routes": [
+				{
+					"pattern": "",
+					"name": "appHome",
+					"target": "home"
+				},
+				{
+					"pattern": "employees",
+					"name": "employeeList",
+					"target": "employees"
+				},
+				{
+					"pattern": "employees/{employeeId}",
+					"name": "employee",
+					"target": "details"
+				}
+			],
 			"targets": {
-				"TargetApp": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearControlAggregation": false,
+				"home": {
+					"viewId": "homePage",
+					"viewLevel": 1,
 					"viewName": "App"
+				},
+				"employees": {
+					"viewId": "employeeList",
+					"viewLevel": 2,
+					"viewName": "Employees"
+				},
+				"details": {
+					"viewId": "employeeDetails",
+					"viewLevel": 3,
+					"viewName": "Details"
+				},
+				"Details": {
+					"viewType": "XML",
+					"viewName": "Details"
 				}
 			}
 		}
