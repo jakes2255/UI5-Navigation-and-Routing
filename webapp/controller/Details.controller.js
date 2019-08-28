@@ -11,9 +11,15 @@ sap.ui.define([
 		 * @memberOf com.demo.Z_NavigationRouting.view.Details
 		 */
 		onInit: function () {
-
+			//this.oOwnerComponent.getRouter().getRoute("employee").attachPatternMatched(this._onProductMatched, this);
 		},
-
+		_onProductMatched: function (oEvent) {
+			this._product = oEvent.getParameter("arguments").employeeId || this._employeeId || "0";
+			this.getView().bindElement({
+				path: "/ProductCollection/" + this._employeeId,
+				model: "products"
+			});
+		}
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).

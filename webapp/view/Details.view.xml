@@ -2,8 +2,12 @@
 	controllerName="com.demo.Z_NavigationRouting.controller.Details" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="Title">
-				<content></content>
+			<Page title="{products>Name}">
+				<content>
+					<FlexBox height="100px" alignItems="Start" justifyContent="Start">
+						<Title text="{products>Name}" wrapping="true"/>
+					</FlexBox>
+				</content>
 			</Page>
 		</pages>
 	</App>

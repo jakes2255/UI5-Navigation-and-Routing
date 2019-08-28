@@ -13,6 +13,12 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+		onListItemPress: function (oEvent) {
+			//debugger;
+			var productPath = oEvent.getSource().getBindingContext("products").getPath(),
+				product = productPath.split("/").slice(-1).pop();
+			this.getOwnerComponent().getRouter().navTo("employee", {employeeId: product});
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
